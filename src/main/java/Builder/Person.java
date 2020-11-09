@@ -2,12 +2,14 @@ package Builder;
 
 public class Person {
 
+    final public static int noAge = -1;
+    final public static String unknown = "unknown";
+
     protected final String name;
     protected final String surname;
     protected int age;
     protected String address;
-    final static int noAge = -1;
-    final static String unknown = "unknown";
+
 
     public Person(String name, String surname) {
         this.name = name;
@@ -98,7 +100,6 @@ public class Person {
     public PersonBuilder newChildBuilder() {
         PersonBuilder newChildBuilder = new PersonBuilder()
                 .setSurname(getSurname())
-                .setAge(getAge())
                 .setAddress(getAddress());
         return newChildBuilder;
 

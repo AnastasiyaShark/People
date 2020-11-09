@@ -2,10 +2,10 @@ package Builder;
 
 public class PersonBuilder {
 
-    String name;
-    String surname;
-    int age;
-    String address;
+    private String name;
+    private String surname;
+    private int age;
+    private String address;
 
 
     public PersonBuilder() {
@@ -24,7 +24,7 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setSurname(String surname) {
-        if (name.equals("")) {
+        if (surname.equals("")) {
             throw new IllegalArgumentException("Wrong surname!");
         }
         this.surname = surname;
@@ -40,7 +40,7 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setAddress(String address) {
-        if (name.equals("")) {
+        if (address.equals("")) {
             throw new IllegalArgumentException("Wrong address!");
         }
         this.address = address;
